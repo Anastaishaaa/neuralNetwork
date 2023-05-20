@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оценка рисков в банковской сфере</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <h1>Автоматизация процесса оценки рисков в банковской сфере с использованием машинного обучения</h1>
+
+        <div class="container" id="container">
+            <form>
+                <div class="criterion">
+                    <input type="number" id="income" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Введите размер заработной платы</label>
+                </div>
+
+                <div class="criterion">
+                    <input type="number" id="age" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Введите возраст</label>
+                </div>
+
+                <div class="criterion">
+                    <input type="number" id="quantity" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Введите количество имеющихся кредитов</label>
+                </div>
+
+                <div class="criterion">
+                    <input type="text" list="purposeList" id="purpose" required>
+                    <datalist id="purposeList">
+                        <option value="Образование">
+                        <option value="Недвижимость">
+                        <option value="Бизнес">
+                        <option value="Авто">
+                        <option value="Потребительский кредит">
+                    </datalist>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Выберите цель кредита</label>
+                </div>
+
+                <div class="criterion">
+                    <input type="text" list="pledgeList" id="pledge" required>
+                    <datalist id="pledgeList">
+                        <option value="Нет">
+                        <option value="Авто">
+                        <option value="Недвижимость">
+                    </datalist>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Наличие залога</label>
+                </div>
+
+                <div class="criterion">
+                    <input type="number" id="creditTerm" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Введите срок кредита в месяцах</label>
+                </div>
+
+                <div class="criterion">
+                    <input type="number" id="amountOfCredits" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Введите сумму кредита</label>
+                </div>
+            </form>
+            <div class="buttonWrapper">
+                <button  class="button" id="button">Оценить риски</button>
+            </div>
+            
+        </div>
+        <h2 class="hide" id="answer">Вероятость, что клиент вернет кредит:</h2>
+    </main>
+    <script src="//unpkg.com/brain.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
